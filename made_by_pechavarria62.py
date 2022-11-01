@@ -120,26 +120,8 @@ print(find_u("oops"))
 
 
 #__________________________________________________________________________________________________
-# Write a function average_vowels that takes a list of strings as a parameter and returns the
-# average number of vowels occurring in each string in the list, both upper- & lower-cased. 
-# No library functions aside from input/output.
 
-# Example function call:
-# print(average_vowels(list))
-# Outputs: 2
-# def average_vowels
 
-'''def average_vowels(list):
-    vowels = 'aeiou'
-    count = 0
-    for i in list:
-        for a in vowels.upper():
-            count += i.upper().count(a)
-            totales = count / count
-    return totales
-list = ["Zebra", "light saber", "1234 JOYS!"]
-print(average_vowels(list))
-'''
 #__________________________________________________________________________________________________
 #__________________________________________________________________________________________________
 #__________________________________________________________________________________________________
