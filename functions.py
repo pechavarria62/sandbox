@@ -404,6 +404,59 @@ list = ["Zebra", "light saber", "1234 JOYS!"]
 print(average_vowels(list))
 
 #__________________________________________________________________________________________________
+
+# Write a program that gets a string as input from the user, and finds the index of the first
+# occurrence of the letter ‘u’ (upper or lower case). Your program should define a function
+# that takes a string as a parameter and returns the u index. If the string does not contain a
+# u, the function should return -1. No library functions aside from input/output.
+
+# Example call          Returns
+# find_u(“OUCH”)           1
+# find_u(“oops”)          -1
+
+def find_u(str):
+    fricative = 'u'
+    count = 0
+    for i in str:
+        for consonants in fricative.upper():
+            count += i.upper().count(consonants)
+            # print(count)
+    if count >= 1:
+        return 1
+    else:
+        return -1
+                
+print(find_u("OUCH"))
+print(find_u("oops"))
+#__________________________________________________________________________________________________
+
+def well(x):
+    t = -3
+    while t < x:
+        if t < 0:
+            t += x
+        else:
+            t *= 2
+    return t 
+
+#__________________________________________________________________________________________________
+
+def why11(list):
+    y = 1
+    j = 0
+    while j < len(list) and y < 11:
+        x = list[j]
+        if x < 0:
+            y -= x
+        elif x % 2 == 0:
+            y *= x
+        else:
+            y += x
+        j += 2
+    return y
+print(why11([4,-1,-5,2,1,3,7,-8]))
+        
+
 #__________________________________________________________________________________________________
 #__________________________________________________________________________________________________
 #__________________________________________________________________________________________________
