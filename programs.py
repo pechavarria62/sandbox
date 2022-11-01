@@ -1,0 +1,201 @@
+# Writing programs by Pedro Echavarria
+
+# (((((((((((((((((Imports)))))))))))))))))
+
+# __________________________________________________________________________________________________
+
+# Create a list of 20 numbers imput by the user and prit the average(mean)of the list.
+
+
+'''def average_num():
+    list = []
+    for i in range(20):
+        num = int(input("give me a number: "))
+        list.append(num)
+        
+    return sum(list)/len(list)
+
+print("the average is ", average_num())'''
+
+
+# __________________________________________________________________________________________________
+
+# Function (mangle) that takes a string as a parameter and returns the string after performing the following operations:
+
+# Converting the string to all upper case letters
+# Removing the third character
+# Removing the third to last character
+
+# Example function calls:	                      Output:
+# print(mangle(“hellothere”))	                 HELOTHRE
+# print(mangle(“42 degrees Celsius”))	        42DEGREES CELSUS
+# print(mangle(“eeeeeee”))	                        EEEEE
+
+
+'''def mangle(str):
+    str = str.upper()
+    str = str[0:2] +str[3:-3]+ str[-2:]
+    return str
+
+def main():
+    print(mangle("hellothere"))
+    # Test mangle
+    test_imput = ["hellothere", "42 degrees Celsius", "eeeeeee"]
+    test_output = ['HELOTHRE', '42DEGREES CELSUS', 'EEEEE']
+    for i in range(len(test_imput)):
+        print('Mangle', test_imput[i] + ':', mangle(test_imput[i]) == test_output[i])
+main()
+'''
+
+
+# __________________________________________________________________________________________________
+
+# Write a function, that takes a list of strings as a parameter and returns the total
+# number of upper and lower case e’s (“E” and “e”) in all the strings in the list. Test that your
+# function works with multiple examples.
+
+
+# Example function call:	Output:
+# print(count_e([“hi”, “hello”, “EEK!”]))	3
+
+'''def count_e(list):
+    num_e = 0 # sum -- aggregates values
+    for string in list:
+        num_e += string.upper().count("E")
+    return num_e
+
+
+
+def main():
+    # Test count_e
+    print(count_e(["hi", "hello", "EEK!"]))
+    print("count_e", count_e(["hi", "hello", "EEK!"]) == 3)
+    
+main()'''
+# __________________________________________________________________________________________________
+
+# Write a function,that takes a list of strings as a parameter and returns the
+# total number of upper and lower case vowels (A, E, I, O, U) in all the strings in the list.
+
+# Example function call:	Output:
+# print(count_vowels([“hi”, “hello”, “OOF!”]))	5
+
+'''def count_vowels(list):
+    num_vowels = 0 # sum -- aggregates values
+    for string in list:
+        upper = string.upper()
+        for vowel in "AEIUO":
+            num_vowels += upper.count(vowel)
+        
+    return num_vowels
+
+
+
+def main():
+    # Test count_e
+    print(count_vowels(["hi", "hello", "OOK!"]))
+    print("count_e", count_vowels(["hi", "hello", "OOK!"]) == 5)
+    
+main()'''
+# __________________________________________________________________________________________________
+
+#          ((((((((((((((((((((((((Challenge: Word Problem))))))))))))))))))))))))
+
+# Your friend is overwhelmed with the number of candidates running in a local election and is
+# undecided on whom to vote for.  Write a program to help him decide. Your friend admires
+# experience—at least 5 years—but not too much experience that the candidate is disconnected from
+# the American people (no more than 20 years)—and wants a candidate who agrees with him on at least
+# 80% of the important issues.  Prompt the user to input the candidate’s number of years of experience
+# and the percentage agreement on important issues.  Example runs:
+
+# > python3 vote.py
+# Enter the candidate’s years of experience: 1
+# What percentage of the issues do you and the candidate agree on? 100
+# Do not vote for this candidate
+
+# > python3 vote.py
+# Enter the candidate’s years of experience: 5
+# On what percentage of the issues do you and the candidate agree? 86
+# Vote for this candidate
+
+# > python vote.py
+# Enter the candidate’s years of experience: 21
+# On what percentage of the issues do you and the candidate agree? 90
+# Do not vote for this candidate
+
+# > python vote.py
+# Enter the candidate’s years of experience: 20
+# On what percentage of the issues do you and the candidate agree? 80
+# Vote for this candidate
+
+
+def vote(experience, agreement_percent):
+
+    if experience >= 21 and agreement_percent >= 80:
+
+        print("Do not vote for this candidate")
+    elif experience >= 5:
+        print("Vote for this candidate")
+    else:
+        print("Do not vote for this candidate")
+
+
+def main():
+    experience = eval(input('Enter the candidate’s years of experience: '))
+    agreement_percent = eval(
+        input('On what percentage of the issues do you and the candidate agree? '))
+    vote(experience, agreement_percent)
+
+
+main()
+
+
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
+# __________________________________________________________________________________________________
