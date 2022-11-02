@@ -2,56 +2,55 @@
 #__________________________________________________________________________________________________
 
 # Count the number of letters grades in a file.
-letters = ['A','B','C','D','F','G','M','H','Q']
-count = {}
-file = "yeas.txt"
+# letters = ['A','B','C','D','F','G','M','H','Q']
+# count = {}
+# file = "yeas.txt"
 # loop through all line in file.
-for line in open(file):
-    letter = line.replace('\n', '').upper() # if any form of space like comas (,) replace them.
+# for line in open(file):
+#     letter = line.replace('\n', '').upper() # if any form of space like comas (,) replace them.
     #  get the amount of letter if they exist if not return 0
-    counts = count.get(letter, 0)  # type: ignore
+    # counts = count.get(letter, 0)  # type: ignore
     # store count
-    count[letter] = counts + 1  # store count
+    # count[letter] = counts + 1  # store count
 
 # print out count.
-print("Letter count: ")
-for l in letters:
-    print(l + ':', count.get(l, 0))
-print()
-print('-'* 20)
-print()
+# print("Letter count: ")
+# for l in letters:
+#     print(l + ':', count.get(l, 0))
+# print()
+# print('-'* 20)
+# print()
 
-print("File Grades Count")
+# print("File Grades Count")
 
-for item in count.keys():
-    print(item + ':', count[item])
+# for item in count.keys():
+#     print(item + ':', count[item])
 #__________________________________________________________________________________________________
 
 # Open a file and display its content/data.
 
-files = open("yeas.txt")
-for i in files:
-    print(i.rstrip())
-files.close()
+# files = open("yeas.txt")
+# for i in files:
+#     print(i.rstrip())
+# files.close()
 
 #__________________________________________________________________________________________________
 
 # Write content in a file from a user.
-prompt = "Please your letter: "
+prompt = "Insert your letter: "
 outFileName = input('What is the name of your output file?: ')
 num_lines  = eval(input('how many line do you want to write?: '))
 
 # Create a new file object , in "write" mode.
-dataFile = open(outFileName, 'w') # use (a) to appendd.
+dataFile = open(outFileName, 'w') # use (a) to append.
 for x in range(num_lines):
     userInput = input(prompt)
     # write the user input in the file.
     print(userInput, file=(dataFile))
 
-for i in dataFile:
-    print(i.rstrip())
-# Close the file with method " close"
 dataFile.close()
+
+
 
 #__________________________________________________________________________________________________
 #__________________________________________________________________________________________________
