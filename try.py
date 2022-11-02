@@ -1,17 +1,22 @@
 # this is where I try codes then a transfer them to their proper file.
 #__________________________________________________________________________________________________
 
-
-letter = ['A','B','C','D','F']
+# Count the number of letters grades in a file.
+letters = ['A','B','C','D','F','G','M','H','Q']
 count = {}
 file = "yeas.txt"
 # loop through all line in file.
 for line in open(file):
-    letter = line.replace('\n', '') # if any form of space like comas (,) replace them.
+    letter = line.replace('\n', '').upper() # if any form of space like comas (,) replace them.
     #  get the amount of letter if they exist if not return 0
-    count = count.get(letter, 0)  # type: ignore
+    counts = count.get(letter, 0)  # type: ignore
+    # store count
+    count[letter] = counts + 1  # store count
 
-# print(escribe(input()))
+# print out count.
+print("Letter count: ")
+for l in letters:
+    print(l + ':', count.get(l, 0))
 #__________________________________________________________________________________________________
 #__________________________________________________________________________________________________
 #__________________________________________________________________________________________________
