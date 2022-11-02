@@ -4,10 +4,10 @@
 
 # __________________________________________________________________________________________________
 
-# Create a list of 20 numbers imput by the user and prit the average(mean)of the list.
+# Create a list of 20 numbers input by the user and print the average(mean)of the list.
 
 
-'''def average_num():
+def average_num():
     list = []
     for i in range(20):
         num = int(input("give me a number: "))
@@ -15,7 +15,7 @@
         
     return sum(list)/len(list)
 
-print("the average is ", average_num())'''
+print("the average is ", average_num())
 
 
 # __________________________________________________________________________________________________
@@ -32,20 +32,20 @@ print("the average is ", average_num())'''
 # print(mangle(“eeeeeee”))	                        EEEEE
 
 
-'''def mangle(str):
+def mangle(str):
     str = str.upper()
     str = str[0:2] +str[3:-3]+ str[-2:]
     return str
 
-def main():
+def main1():
     print(mangle("hellothere"))
     # Test mangle
-    test_imput = ["hellothere", "42 degrees Celsius", "eeeeeee"]
+    test_input = ["hellothere", "42 degrees Celsius", "eeeeeee"]
     test_output = ['HELOTHRE', '42DEGREES CELSUS', 'EEEEE']
-    for i in range(len(test_imput)):
-        print('Mangle', test_imput[i] + ':', mangle(test_imput[i]) == test_output[i])
-main()
-'''
+    for i in range(len(test_input)):
+        print('Mangle', test_input[i] + ':', mangle(test_input[i]) == test_output[i])
+main1()
+
 
 
 # __________________________________________________________________________________________________
@@ -58,7 +58,7 @@ main()
 # Example function call:	Output:
 # print(count_e([“hi”, “hello”, “EEK!”]))	3
 
-'''def count_e(list):
+def count_e(list):
     num_e = 0 # sum -- aggregates values
     for string in list:
         num_e += string.upper().count("E")
@@ -66,12 +66,12 @@ main()
 
 
 
-def main():
+def main2():
     # Test count_e
     print(count_e(["hi", "hello", "EEK!"]))
     print("count_e", count_e(["hi", "hello", "EEK!"]) == 3)
     
-main()'''
+main2()
 # __________________________________________________________________________________________________
 
 # Write a function,that takes a list of strings as a parameter and returns the
@@ -80,7 +80,7 @@ main()'''
 # Example function call:	Output:
 # print(count_vowels([“hi”, “hello”, “OOF!”]))	5
 
-'''def count_vowels(list):
+def count_vowels(list):
     num_vowels = 0 # sum -- aggregates values
     for string in list:
         upper = string.upper()
@@ -91,12 +91,12 @@ main()'''
 
 
 
-def main():
+def main3():
     # Test count_e
     print(count_vowels(["hi", "hello", "OOK!"]))
     print("count_e", count_vowels(["hi", "hello", "OOK!"]) == 5)
     
-main()'''
+main3()
 # __________________________________________________________________________________________________
 
 #          ((((((((((((((((((((((((Challenge: Word Problem))))))))))))))))))))))))
@@ -140,14 +140,14 @@ def vote(experience, agreement_percent):
         print("Do not vote for this candidate")
 
 
-def main():
+def main4():
     experience = eval(input('Enter the candidate’s years of experience: '))
     agreement_percent = eval(
         input('On what percentage of the issues do you and the candidate agree? '))
     vote(experience, agreement_percent)
 
 
-main()
+main4()
 
 
 # __________________________________________________________________________________________________
