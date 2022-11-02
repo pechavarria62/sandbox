@@ -2,12 +2,15 @@
 #__________________________________________________________________________________________________
 
 
-promt = input("enter you lines:")
+letter = ['A','B','C','D','F']
+count = {}
+file = "yeas.txt"
+# loop through all line in file.
+for line in open(file):
+    letter = line.replace('\n', '') # if any form of space like comas (,) replace them.
+    #  get the amount of letter if they exist if not return 0
+    count = count.get(letter, 0)  # type: ignore
 
-file_name = open("yeas.txt", "w")
-def escribe(str):
-    if str in  file_name:
-        file_name = str
 # print(escribe(input()))
 #__________________________________________________________________________________________________
 #__________________________________________________________________________________________________
