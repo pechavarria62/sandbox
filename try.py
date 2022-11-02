@@ -26,7 +26,33 @@ print("File Grades Count")
 for item in count.keys():
     print(item + ':', count[item])
 #__________________________________________________________________________________________________
+
+# Open a file and display its content/data.
+
+files = open("yeas.txt")
+for i in files:
+    print(i.rstrip())
+files.close()
+
 #__________________________________________________________________________________________________
+
+# Write content in a file from a user.
+prompt = "Please your letter: "
+outFileName = input('What is the name of your output file?: ')
+num_lines  = eval(input('how many line do you want to write?: '))
+
+# Create a new file object , in "write" mode.
+dataFile = open(outFileName, 'w') # use (a) to appendd.
+for x in range(num_lines):
+    userInput = input(prompt)
+    # write the user input in the file.
+    print(userInput, file=(dataFile))
+
+for i in dataFile:
+    print(i.rstrip())
+# Close the file with method " close"
+dataFile.close()
+
 #__________________________________________________________________________________________________
 #__________________________________________________________________________________________________
 #__________________________________________________________________________________________________
