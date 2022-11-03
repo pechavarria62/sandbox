@@ -17,9 +17,9 @@ import statistics
 # receive feedback, please submit a screenshot of your program & its output.
 
 def output_stats(list,another):
-    print("Mean: ", statistics.mean(list), statistics.mean(another),sep=" "*5)
-    print("Median: ", statistics.median(list), statistics.mean(another),sep=" "*5)
-    print("STD:    ", statistics.stdev(list), statistics.mean(another),sep=" "*5)
+    print("Mean:  ", "%.2f" % statistics.mean(list), "%.2f" % statistics.mean(another),sep="  "*5)
+    print("Median:", "%.2f" % statistics.median(list), "%.2f" % statistics.median(another),sep="  "*5)
+    print("STD:   ", "%.2f" % statistics.stdev(list), "%.2f" % statistics.stdev(another),sep="  "*5)
     print()
 
 spring = []
@@ -36,6 +36,6 @@ for line in file:
 
 file.close()
 def main():
-    print('','Fall 2016: ', 'Spring 2016:', sep=" "*10)
+    print('   ','    Fall 2016:', 'Spring 2016:', sep=" "*7)
     output_stats(fall,spring)
 main()
