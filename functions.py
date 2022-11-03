@@ -512,7 +512,7 @@ def day():
     str1 = favorite_month[0].upper()
     str2 = favorite_month[1:].lower()
     print(str1 + str2, favorite_day , ", 2020")
-    print("Is the month alphanumeric?", favorite_month .isalnum())
+    print("Is the month alphanumeric?", favorite_month.isalnum())
     print("How many 2’s?",favorite_day.count("2"))
     favorite_day = int(favorite_day)
     print("Factorial: ", factorial(favorite_day)) 
