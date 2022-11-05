@@ -151,8 +151,57 @@ print("Average of the squares: ", sq)
 print('_'*20)
 print()
 #__________________________________________________________________________________________________
+
+# Write content in a file from a user.
+prompt = "Insert your letter: "
+outFileName = input('What is the name of your output file?: ')
+num_lines  = eval(input('how many line do you want to write?: '))
+
+# Create a new file object , in "write" mode.
+dataFile = open(outFileName, 'w') # use (a) to append.
+for x in range(num_lines):
+    userInput = input(prompt)
+    # write the user input in the file.
+    print(userInput, file=(dataFile))
+
+dataFile.close()
+
 #__________________________________________________________________________________________________
+
+# Open a file and display its content/data.
+
+files = open("yeas.txt")
+for i in files:
+    print(i.rstrip())
+files.close()
+
 #__________________________________________________________________________________________________
+
+# Count the number of letters grades in a file.
+letters = ['A','B','C','D','F','G','M','H','Q']
+count = {}
+file = "yeas.txt"
+# loop through all line in file.
+for line in open(file):
+    letter = line.replace('\n', '').upper() # if any form of space like comas (,) replace them.
+    # get the amount of letter if they exist if not return 0
+    counts = count.get(letter, 0)  # type: ignore
+    # store count
+    count[letter] = counts + 1  # store count
+
+# print out count.
+print("Letter count: ")
+for l in letters:
+    print(l + ':', count.get(l, 0))
+print()
+print('-'* 20)
+print()
+
+print("File Grades Count")
+
+for item in count.keys():
+    print(item + ':', count[item])
+
 #__________________________________________________________________________________________________
 #__________________________________________________________________________________________________
 #__________________________________________________________________________________________________
