@@ -1,7 +1,20 @@
 # this is where I try codes then a transfer them to their proper file.
 #__________________________________________________________________________________________________
 
+import math
+import os
+import random
+import re
+import sys
 
+# Reverse an array
+def reverseArray(a):
+    b = len(a)-1 
+    return a[b::-1]
+def main():
+    arr = [1,4,3,2]
+    print(reverseArray(arr))
+main()
 #__________________________________________________________________________________________________
 
 
