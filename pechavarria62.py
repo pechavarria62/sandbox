@@ -16,3 +16,4 @@ import statistics
 # 5. Your program should not take any user input.
 
 def turing():
+    pass
