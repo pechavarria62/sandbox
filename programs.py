@@ -18,10 +18,11 @@ import os
 def average_num():
     list = []
     for i in range(20):
-        num = int(input("give me a number: "))
+        num = int(input("give me a number: "))  # type: ignore
         list.append(num)
-        
+
     return sum(list)/len(list)
+
 
 print("the average is ", average_num())
 
@@ -42,8 +43,9 @@ print("the average is ", average_num())
 
 def mangle(str):
     str = str.upper()
-    str = str[0:2] +str[3:-3]+ str[-2:]
+    str = str[0:2] + str[3:-3] + str[-2:]
     return str
+
 
 def main1():
     print(mangle("hellothere"))
@@ -51,9 +53,11 @@ def main1():
     test_input = ["hellothere", "42 degrees Celsius", "eeeeeee"]
     test_output = ['HELOTHRE', '42DEGREES CELSUS', 'EEEEE']
     for i in range(len(test_input)):
-        print('Mangle', test_input[i] + ':', mangle(test_input[i]) == test_output[i])
-main1()
+        print('Mangle', test_input[i] + ':',
+              mangle(test_input[i]) == test_output[i])
 
+
+main1()
 
 
 # __________________________________________________________________________________________________
@@ -67,18 +71,18 @@ main1()
 # print(count_e([“hi”, “hello”, “EEK!”]))	3
 
 def count_e(list):
-    num_e = 0 # sum -- aggregates values
+    num_e = 0  # sum -- aggregates values
     for string in list:
         num_e += string.upper().count("E")
     return num_e
-
 
 
 def main2():
     # Test count_e
     print(count_e(["hi", "hello", "EEK!"]))
     print("count_e", count_e(["hi", "hello", "EEK!"]) == 3)
-    
+
+
 main2()
 # __________________________________________________________________________________________________
 
@@ -88,22 +92,23 @@ main2()
 # Example function call:	Output:
 # print(count_vowels([“hi”, “hello”, “OOF!”]))	5
 
+
 def count_vowels(list):
-    num_vowels = 0 # sum -- aggregates values
+    num_vowels = 0  # sum -- aggregates values
     for string in list:
         upper = string.upper()
         for vowel in "AEIUO":
             num_vowels += upper.count(vowel)
-        
-    return num_vowels
 
+    return num_vowels
 
 
 def main3():
     # Test count_e
     print(count_vowels(["hi", "hello", "OOK!"]))
     print("count_e", count_vowels(["hi", "hello", "OOK!"]) == 5)
-    
+
+
 main3()
 # __________________________________________________________________________________________________
 
@@ -163,39 +168,45 @@ main4()
 # Program reads in a csv file and outputs the mean, median, and standard deviation for
 # the fall & spring semesters.
 
-def output_stats(list,easter):
-    mms = ['Mean  ','Median','STD    ']
-    mean_fall = "%.2f" % statistics.mean(list) 
+def output_stats(list, easter):
+    mms = ['Mean  ', 'Median', 'STD    ']
+    mean_fall = "%.2f" % statistics.mean(list)
     mean_spring = "%.2f" % statistics.mean(easter)
 
-    median_fall = "%.2f" % statistics.median(list) 
+    median_fall = "%.2f" % statistics.median(list)
     median_spring = "%.2f" % statistics.median(easter)
 
-    std_fall = "%.2f" % statistics.stdev(list) 
+    std_fall = "%.2f" % statistics.stdev(list)
     std_spring = "%.2f" % statistics.stdev(easter)
 
-    print(' '*10,'Fall 2016', 'Spring 2016',sep=" "*5 )
-    print(mms[0],mean_fall,mean_spring,sep="  "*5)
-    print(mms[1],median_fall,median_spring ,sep="  "*5)
-    print(mms[2],std_fall,std_spring,sep="  "*5)
+    print(' '*10, 'Fall 2016', 'Spring 2016', sep=" "*5)
+    print(mms[0], mean_fall, mean_spring, sep="  "*5)
+    print(mms[1], median_fall, median_spring, sep="  "*5)
+    print(mms[2], std_fall, std_spring, sep="  "*5)
+
 
 spring = []
 fall = []
 data = "sample_grades.csv"
+
+
 def sort_csv():
     file = open(data)
     for line in file:
         list = line.rstrip().split(",")
-        
+
         if list[1] == 'Spring 2016':
-            spring.append(eval(list[2]))  
+            spring.append(eval(list[2]))
         else:
-            fall.append(eval(list[2]))  
+            fall.append(eval(list[2]))
     file.close()
+
 
 def main5():
     sort_csv()
-    output_stats(fall,spring)
+    output_stats(fall, spring)
+
+
 main5()
 
 
@@ -203,11 +214,15 @@ main5()
 
 # Reverse an array
 def reverseArray(a):
-    b = len(a)-1 
+    b = len(a)-1
     return a[b::-1]
+
+
 def main6():
-    arr = [1,4,3,2]
+    arr = [1, 4, 3, 2]
     print(reverseArray(arr))
+
+
 main6()
 
 # __________________________________________________________________________________________________
@@ -218,6 +233,7 @@ main6()
 # FOLDER_PATH =  r"imput_path"
 FOLDER_PATH = r"/Volumes/personal/repos/sandbox"  # files path.
 
+
 def listDir(dir):
     filesNames = os.listdir(dir)
     for filesName in filesNames:
@@ -226,17 +242,17 @@ def listDir(dir):
 
 if __name__ == '__main__':
     listDir(FOLDER_PATH)
-#-------------------------------------------------------
+# -------------------------------------------------------
 # Example Output:
-# File Name hello.py    
-# File Name texts_files 
-# File Name ._.vscode    
-# File Name if.py       
-# File Name ForLoops.py  
-# File Name try.py       
-# File Name fors_ifs.py 
-# File Name functions.py 
-# File Name programs.py  
+# File Name hello.py
+# File Name texts_files
+# File Name ._.vscode
+# File Name if.py
+# File Name ForLoops.py
+# File Name try.py
+# File Name fors_ifs.py
+# File Name functions.py
+# File Name programs.py
 # File Name hard-drive-read.py
 
 # __________________________________________________________________________________________________
