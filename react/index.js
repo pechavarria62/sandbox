@@ -1,5 +1,1 @@
-function MyButton() {
-    return (
-        <button>I'm a button</button>
-    );
-}
+ReactDom.rander(<h1>Hello,klk</h1>)
