@@ -6,6 +6,9 @@
 from math import degrees, factorial, log
 import random
 import turtle
+import os
+import re
+import sys
 #((((((((((((((((((((((((( Imports )))))))))))))))))))))))))
 #__________________________________________________________________________________________________
 
@@ -86,8 +89,6 @@ main4()
 
 
 # Draws a cake by calling the_candle and rectangle functions.
-
-import turtle
 
 def cake_layers(width,height):
     for i in range(2):
@@ -205,3 +206,30 @@ def average_vowels(list):
     return totales # type:ignore
 list = ["Zebra", "light saber", "1234 JOYS!"]
 print(average_vowels(list))
+
+#__________________________________________________________________________________________________
+
+# Given a and b, determine their respective comparison points.
+
+#
+# Complete the 'compareTriplets' function below.
+#
+# The function is expected to return an INTEGER_ARRAY.
+# The function accepts following parameters:
+#  1. INTEGER_ARRAY a
+#  2. INTEGER_ARRAY b
+#
+
+def compareTriplets(a, b):
+    count_a = 0
+    count_b = 0
+    count_b = sum(0 for i in range(len(a)) if a[i] == b[i])
+    count_a = sum(0 for i in range(len(a)) if a[i] == b[i])
+    count_a = sum(1 for i in range(len(a)) if a[i] > b[i])
+    count_b = sum(1 for i in range(len(a)) if a[i] < b[i])
+    return count_a , count_b
+
+def main_8():
+    print(compareTriplets([5 ,6, 7], [3, 6 ,10]))
+if __name__ == '__main__':
+    main_8()
